@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">evertec-app</string>
+    <string name="title_activity_login">Login</string>
+    <string name="base_uri_placetopay" >https://dev.placetopay.com/rest</string>
 </resources>
