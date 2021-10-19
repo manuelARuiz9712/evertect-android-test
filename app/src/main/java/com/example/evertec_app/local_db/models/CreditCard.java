@@ -31,6 +31,11 @@ public class CreditCard {
 
     }
 
+    public final String GetUserCreditCard(int userId){
+
+        return "SELECT * FROM "+this.tableName+" WHERE "+this.userId+" ="+userId;
+    }
+
 
 
 }

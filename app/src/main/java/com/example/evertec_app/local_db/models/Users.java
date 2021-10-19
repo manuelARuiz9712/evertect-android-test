@@ -20,6 +20,12 @@ public  class Users {
 
     }
 
+    public final String GetUserByEmail(String email){
+
+        return "SELECT * FROM "+this.tableName+" WHERE "+this.userEmail+"= '"+email+"'";
+    }
+
+
 
 
 
