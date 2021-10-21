@@ -1,7 +1,9 @@
-package com.example.evertec_app.local_db.models;
+package com.example.evertec_app.local_db.table_schemas;
 
-public  class Users {
-    public static final String tableName  = "users";
+import com.example.evertec_app.models.User;
+
+public  class UserSchema {
+    public static  final String tableName  = "users";
     public static final String userId = "user_id";
     public static final String userName = "user_name";
     public  static  final  String userEmail = "user_email";
@@ -23,6 +25,12 @@ public  class Users {
     public final String GetUserByEmail(String email){
 
         return "SELECT * FROM "+this.tableName+" WHERE "+this.userEmail+"= '"+email+"'";
+    }
+    public  String getInsertQuery(User user){
+
+        return "INSERT INTO "+this.tableName+" ("+this.userName+" ,"+this.userEmail+" , "+this.userPassword+" )" +
+                "VALUES ( "+user.getUserName()+" , "+user.getUserEmail()+" , "+ user.getUserPassword() +" ) ";
+
     }
 
 

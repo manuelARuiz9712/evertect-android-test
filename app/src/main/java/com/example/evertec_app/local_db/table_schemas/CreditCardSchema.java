@@ -1,8 +1,6 @@
-package com.example.evertec_app.local_db.models;
+package com.example.evertec_app.local_db.table_schemas;
 
-import com.example.evertec_app.models.Card;
-
-public class CreditCard {
+public class CreditCardSchema {
 
     public static final String tableName = "credit_card";
     public static final String creditCardId = "credit_card_id";
@@ -13,7 +11,7 @@ public class CreditCard {
     public static final String lastDigits = "credit_card_last_digits";
     public static final String validUntil = "credit_card_valid_until";
     public static final String installments = "credit_card_installments";
-    public static final String userId = "credit_card_"+Users.userId;
+    public static final String userId = "credit_card_"+ UserSchema.userId;
 
     public  final String CreateTableQuery(){
 

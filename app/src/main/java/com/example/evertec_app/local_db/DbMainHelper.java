@@ -1,21 +1,20 @@
 package com.example.evertec_app.local_db;
 
 import android.content.Context;
-import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.evertec_app.local_db.models.CreditCard;
-import com.example.evertec_app.local_db.models.Users;
+import com.example.evertec_app.local_db.table_schemas.CreditCardSchema;
+import com.example.evertec_app.local_db.table_schemas.UserSchema;
 
-public class DbMain extends SQLiteOpenHelper {
+public class DbMainHelper extends SQLiteOpenHelper {
 
-    private  Users user = new Users();
-    private CreditCard creditCard = new CreditCard();
+    private UserSchema user = new UserSchema();
+    private CreditCardSchema creditCard = new CreditCardSchema();
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "test_evertec.db";
 
-    public DbMain(Context context) {
+    public DbMainHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 

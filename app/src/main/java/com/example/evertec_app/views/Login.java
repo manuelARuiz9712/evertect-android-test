@@ -11,9 +11,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.evertec_app.R;
+import com.example.evertec_app.local_db.DbMainHelper;
 
 public class Login extends AppCompatActivity {
 
+    DbMainHelper localDbHelper;
     TextView registerText ;
     EditText editEmail;
     EditText editPassword;
@@ -24,6 +26,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getSupportActionBar().hide();
+
+        localDbHelper = new DbMainHelper(getApplicationContext());
         registerText = (TextView) findViewById(R.id.text_register);
         editEmail = (EditText) findViewById(R.id.edit_text_email);
         editPassword = (EditText) findViewById(R.id.edit_text_clave);
@@ -48,7 +53,7 @@ public class Login extends AppCompatActivity {
 
 
                 }else{
-                    Toast.makeText(v.getContext(),"Los campos son obligatorios",Toast.LENGTH_LONG);
+                    Toast.makeText(v.getContext(),"Los campos son obligatorios",Toast.LENGTH_LONG).show();
                 }
 
             }
