@@ -12,5 +12,8 @@ public class AddCard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_card);
+
+        getSupportActionBar().setTitle("Agregar tarjeta");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
