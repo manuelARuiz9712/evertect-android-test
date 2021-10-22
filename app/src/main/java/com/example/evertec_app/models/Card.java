@@ -1,5 +1,7 @@
 package com.example.evertec_app.models;
 
+import java.util.regex.Pattern;
+
 public class Card {
     private String number;
     private String expiration;
@@ -36,6 +38,25 @@ public class Card {
 
     public void setInstallments(int installments) {
         this.installments = installments;
+    }
+
+    public boolean isValidTarget(){
+            boolean status = true;
+
+            if ( this.number.length() < 20 ){
+                status = false;
+            }
+            if ( this.cvv.length() != 3 ){
+                status = false;
+            }
+            if (!Pattern.matches("^[01]\\d\\/\\d{2}$",this.expiration)){
+                status = false;
+            }
+
+
+            return status;
+
+
     }
 
 
