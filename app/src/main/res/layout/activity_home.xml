@@ -7,7 +7,7 @@
     tools:context=".views.Home">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_targets"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginStart="50dp"
@@ -17,10 +17,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_transactions" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_pays"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginStart="50dp"
@@ -29,10 +29,10 @@
         android:text="MIs pagos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_targets" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btn_logout"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginStart="50dp"
@@ -42,10 +42,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_pays" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btn_transactions"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginStart="50dp"
